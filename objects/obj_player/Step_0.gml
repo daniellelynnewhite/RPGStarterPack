@@ -9,6 +9,8 @@ if (_hor != 0 or _ver != 0)
     else if (_ver < 0) sprite_index = spr_player_walk_up;
     else if (_hor > 0) sprite_index = spr_player_walk_right;
     else if (_hor < 0) sprite_index = spr_player_walk_left;
+        
+    facing = point_direction(0, 0, _hor, _ver);
 }
 else
 {
@@ -21,6 +23,6 @@ else
 if (keyboard_check_pressed(vk_space))
 {
     var _inst = instance_create_depth(x, y, depth, obj_attack);
-    _inst.image_angle = point_direction(0, 0, _hor, _ver);
+    _inst.image_angle = facing;
     _inst.damage *= damage;
 }
