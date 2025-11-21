@@ -9,6 +9,7 @@ function create_dialog(_messages){
 char_colors = {
     "Congrats": c_green,
     "Cross": c_yellow,
+    "Cam": c_fuchsia,
     "Singh": c_aqua
 }
 
@@ -33,5 +34,17 @@ welcome_dialog =
         {
             name: "Cross",
             msg: "Can you make it to the end?"
+        }
+    ]
+
+cam_dialog1 = 
+    [
+        {
+            name: "Cam",
+            msg: "I'm scared to go inside."
+        },
+        {
+            name: "Cam",
+            msg: "Can you try first please?"
         }
     ]
